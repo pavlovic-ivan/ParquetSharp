@@ -127,7 +127,7 @@ jobs:
       run: ./vcpkg_windows.bat
     - name: Upload vcpkg arrow logs
       if: steps.get-cached-vcpkg.outputs.cache-hit != 'true' && (success() || failure())
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2.2.4
       with:
         name: ${{ steps.vcpkg-triplet.outputs.triplet }}-vcpkg-arrow-logs
         path: build/vcpkg.${{ steps.vcpkg-triplet.outputs.triplet }}/buildtrees/arrow/*.log
