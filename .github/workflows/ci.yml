@@ -214,7 +214,7 @@ jobs:
         - os: windows-latest
           dotnet: 4
           arch: x64
-        - os: ubuntu-20.04
+        - os: ARM64
           dotnet: 5
           arch: arm64
       fail-fast: false
